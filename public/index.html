@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرئيسية - مكتبة الكتب الإلكترونية</title>
+    <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Dubai', sans-serif;
+            background: linear-gradient(45deg, #002773, #215acc, #c8bebe, #c8bebe);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0 50%;
+            }
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        #search-box {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        #search-box h2 {
+            margin-bottom: 20px;
+            color: #555;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #search-box form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        #search-box input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        #search-box input[type="text"]:focus {
+            border-color: #007bff;
+        }
+
+        #search-box button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #search-box button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            transition: bottom 0.5s ease;
+        }
+
+        footer:hover {
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+<!-- شريط التنقل -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="/">الصفحة الرئيسية</a></li>
+            <li><a href="/search">صفحة البحث</a></li>
+            <li><a href="/cms">نظام إدارة المحتوى</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- مربع البحث -->
+<section id="search-box">
+    <h2>ابحث عن الموارد</h2>
+    <form action="/search" method="GET">
+        <label>
+            <input type="text" name="query" placeholder="ابحث...">
+        </label>
+        <button type="submit">بحث</button>
+    </form>
+</section>
+<!-- مركز الموارد الدراسية -->
+<!-- الشريط الجانبي -->
+<section id="sidebar">
+    <!-- الكتب -->
+    <div id="books">
+        <h3><i class="fas fa-book"></i> الكتب</h3>
+        <ul>
+            <li><a href="#"><i class="fas fa-angle-left"></i> كتب إلكترونية</a></li>
+            <li><a href="#"><i class="fas fa-angle-left"></i> كتب ورقية</a></li>
+        </ul>
+    </div>
+
+    <!-- أبحاث ودراسات -->
+    <div id="research">
+        <h3><i class="fas fa-flask"></i> أبحاث ودراسات</h3>
+        <ul>
+            <li><a href="#"><i class="fas fa-angle-left"></i> قائمة بالأبحاث</a></li>
+        </ul>
+    </div>
+
+    <!-- محتوى مرئي -->
+    <div id="visual-content">
+        <h3><i class="fas fa-film"></i> محتوى مرئي</h3>
+        <ul>
+            <li><a href="#"><i class="fas fa-angle-left"></i> محاضرات</a></li>
+        </ul>
+    </div>
+
+    <!-- الشيتات -->
+    <div id="sheets">
+        <h3><i class="fas fa-file-alt"></i> الشيتات</h3>
+        <ul>
+            <li><a href="#"><i class="fas fa-angle-left"></i> قائمة بالشيتات</a></li>
+        </ul>
+    </div>
+
+    <!-- مصادر تعليمية عبر الإنترنت -->
+    <div id="online-resources">
+        <h3><i class="fas fa-globe"></i> مصادر تعليمية عبر الإنترنت</h3>
+        <ul>
+            <li><a href="#"><i class="fas fa-angle-left"></i> قائمة بالمصادر التعليمية عبر الإنترنت</a></li>
+        </ul>
+    </div>
+</section>
+
+
+
+<!-- الخط الجميل -->
+<hr>
+
+<!-- الشريط السفلي -->
+<footer id="footer">
+    <!-- محتوى الشريط السفلي -->
+</footer>
+
+<!-- السكريبت -->
+<script src="/public/js/script.js"></script>
+</body>
+
+</html>
