@@ -11,7 +11,6 @@ The Digital Library for Tripoli University is a web-based platform designed to s
 - **Front-end**: HTML, CSS, JavaScript
 - **Back-end**: JavaScript (Node.js)
 - **IDE**: WebStorm
-- **Database**: MySQL
 
 ## Usage
 
